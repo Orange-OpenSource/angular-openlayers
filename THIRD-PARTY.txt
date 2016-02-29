@@ -1,0 +1,40 @@
+Legal Information
+angular-openlayers
+Copyright © 2015 Orange – All rights reserved
+
+Third Party Software
+
+AngularJS
+Copyright Google ©2010-2016
+License - MIT
+
+
+OpenLayers3
+Copyright 2005-2016 OpenLayers Contributors.
+License - 2-Clause BSD
+
+highlight.js
+Copyright (c) 2006, Ivan Sagalaev
+License - 3-Clause BSD
+
+angular-highlightjs
+Copyright (c) 2013 Robin Fan
+License - MIT
+
+Bootstrap
+Copyright (c) 2011-2016 Twitter, Inc.
+License - MIT
+
+JSDoc 3
+Copyright (c) 2011-2015 Michael Mathews micmath@gmail.com and the contributors to JSDoc.
+License - Apache License, Version 2.0
+
+Open Sans
+Copyright (c) 2010-2011, Google Inc.
+License - Apache License, Version 2.0
+
+Google Code Prettify
+Copyright (c) 2006, Google Inc.
+License - Apache License, Version 2.0
+
+

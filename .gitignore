@@ -1,0 +1,10 @@
+
+*.swp
+.*.swp
+*.iml
+.DS_Store
+.idea
+.project
+bower_components
+node_modules
+doc/*

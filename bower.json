@@ -1,0 +1,28 @@
+{
+  "name": "angular-openlayers3",
+  "version": "1.0.0",
+  "authors": [
+    "Quentin Lampin <quentin.lampin@orange.com>"
+  ],
+  "description": "OpenLayers3 directive for angular 1.x",
+  "main": "dist/angular-openlayers.js",
+  "keywords": [
+    "openlayers3",
+    "angular"
+  ],
+  "license": "MPL-2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-highlightjs": "~0.5.1",
+    "bootstrap": "~3.3.6",
+    "highlightjs": "~9.1.0",
+    "angular": "~1.5.0",
+    "ol3": "ol3-bower#^3.14.0"
+  }
+}
