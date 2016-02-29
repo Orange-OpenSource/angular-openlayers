@@ -12,19 +12,17 @@ It means that anyone familiar to OpenLayers3 will be proficient in an instant wi
 - Examples are available in ```/examples/```
 - An exhaustive API documentation is available in ```/doc/```.
 
-## Building angular-openlayer and readying the examples
-
-    npm install
+## Installing angular-openlayers
+```bash
     bower install
-    grunt build-dep
-    grunt
+```
 
 ## Installation
-NPM:
 
-        npm install angular-openlayers
-Bower:
-        bower install angular-openlayers
+###Bower:
+```bash
+    bower install angular-openlayers
+```
 
 ## License
 Code: Mozilla Public License Version 2.0 (MPL-2.0).
