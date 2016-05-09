@@ -3,7 +3,7 @@
   "company": "Orange",
   "name": "angular-openlayers",
   "description": "angular-openlayers - AngularJS directives for OpenLayers 3",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "http://quentinlampin.github.io/angular-openlayers/",
   "repository": {
     "type": "git",

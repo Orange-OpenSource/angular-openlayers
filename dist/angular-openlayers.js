@@ -1,4 +1,4 @@
-/*! angular-openlayers - v1.0.0 - 2016-02-29
+/*! angular-openlayers - v1.0.0 - 2016-05-09
 * http://quentinlampin.github.io/angular-openlayers/
 * Copyright (c) 2016 Orange; Licensed MPL-2.0 */
 
@@ -448,19 +448,20 @@ aol.overrides.collections.Style = (function() {
  */
 aol.overrides.collections.Coordinate = (function() {
     function Dummy(attributes) {
+        if(angular.isDefined(attributes['coordinates'])){
+            /**
+             * Removes a coordinate from the collection
+             * @param {ol.Coordinate} coordinate
+             */
+            attributes['coordinates'].remove = function(coordinate){
+                this.splice(this.indexOf(coordinate),1);
+            };
+        }
         return attributes['coordinates'];
     }
     return Dummy;
 })();
 
-
-/**
- * Removes a coordinate from the collection
- * @param {ol.Coordinate} coordinate
- */
-aol.overrides.collections.Coordinate.prototype.remove = function(coordinate) {
-    this['coordinates'].splice(this.indexOf(coordinate),1);
-};
 
 /**
  * interactions collection instance constructor.
@@ -469,6 +470,15 @@ aol.overrides.collections.Coordinate.prototype.remove = function(coordinate) {
  */
 aol.overrides.collections.Interaction = (function() {
     function Dummy(attributes) {
+        if(angular.isDefined(attributes['interactions'])){
+            /**
+             * Removes an interaction from the collection
+             * @param {ol.Interaction} interaction
+             */
+            attributes['interactions'].remove = function(interaction){
+                this.splice(this.indexOf(interaction),1);
+            };
+        }
         return attributes['interactions'];
     }
     return Dummy;
@@ -481,6 +491,13 @@ aol.overrides.collections.Interaction = (function() {
  */
 aol.overrides.collections.Layer = (function() {
     function Dummy(attributes) {
+        /**
+         * Removes a layer from the collection
+         * @param {ol.Layer} layer
+         */
+        attributes['layers'].remove = function(layer){
+            this.splice(this.indexOf(layer),1);
+        };
         return attributes['layers'];
     }
     return Dummy;
