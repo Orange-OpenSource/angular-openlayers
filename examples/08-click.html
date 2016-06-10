@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Feature example</title>
+
+   <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+   <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap-theme.css">
+   <link rel="stylesheet" href="../bower_components/ol3/ol.css">
+   <link rel="stylesheet" href="../dist/angular-openlayers.css">
+   <link rel="stylesheet" href="99-style.css">
+   <link rel="stylesheet" href="../bower_components/highlightjs/styles/androidstudio.css">
+
+   <script src="../bower_components/angular/angular.js"></script>
+   <script src="../bower_components/highlightjs/highlight.pack.js"></script>
+   <script src="../bower_components/angular-highlightjs/angular-highlightjs.js"></script>
+   <script src="../bower_components/ol3/ol-debug.js"></script>
+   <script src="../dist/angular-openlayers.js"></script>
+   <script src="08-click.js"></script>
+</head>
+
+<body ng-app="example" ng-controller="ExempleClick as ctrl">
+   <div class="container-fluid">
+      <div class="page-header">
+         <h1>AngularOpenLayers examples</h1>
+      </div>
+      <h2>Click example</h2>
+      <p>
+         The following example demonstrates how to add a click handler. <br>
+         Click on the map to obtain console log "singleclick catched on aol.Model.Map() at lCoordinates= [XXXXX, YYYYY] , run alert on each corresponding Feature". <br>
+         For each feature available at this point an alert is triggered (only one node in this sample) with following content : "singleclick catched on with satanic properties : pFeature.values_.properties=666" <br>
+         "Ctrl" usage is also furnished as example with console log "ctrl + singleclick catched on aol.Model.Map()". <br>
+      </p>
+      <div class="row flex">
+         <div hljs class="col-md-7 flex flex-column-wrap">
+<aol-map aol-model="myAolModel">
+   <aol-layer-tile>
+	[...]
+   </aol-layer-tile>
+   <aol-layer-vector>
+      <aol-source-vector>
+         <aol-feature aol-properties="666">
+            <aol-geometry-point>
+               <aol-coordinate aol-x="5" aol-y="45">
+                  <aol-projection aol-code="'EPSG:4326'"></aol-projection>
+               </aol-coordinate>
+            </aol-geometry-point>
+         </aol-feature>
+      </aol-source-vector>
+   </aol-layer-vector>
+</aol-map>
+         </div>
+         <div class="col-md-5 flex flex-column-wrap">
+            <aol-map aol-model="myAolModel">
+               <aol-layer-tile>
+                  <aol-source-osm aol-url="'http://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png'">
+                  </aol-source-osm>
+               </aol-layer-tile>
+               <aol-layer-vector>
+                  <aol-source-vector>
+                     <aol-feature aol-properties="666">
+                        <aol-geometry-point>
+                           <aol-coordinate aol-x="5" aol-y="45">
+                              <aol-projection aol-code="'EPSG:4326'"></aol-projection>
+                           </aol-coordinate>
+                        </aol-geometry-point>
+                     </aol-feature>
+                  </aol-source-vector>
+               </aol-layer-vector>
+            </aol-map>
+         </div>
+      </div>
+      <div class="alert alert-info" role="alert">
+         <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> 
+         Refer to "aol-properties" on "aol-feature" tag to understand "alert" triggered when clicking on node.
+      </div>
+   </div>
+</body>
+
+</html>
